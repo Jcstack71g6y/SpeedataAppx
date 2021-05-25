@@ -157,6 +157,7 @@ public class IdentityAct extends AppCompatActivity {
 
 
     private boolean isShow = false;//成功读取过后   不显示循环读取返回错误信息
+//    private
     @SuppressLint("HandlerLeak")
     Handler handler = new Handler() {
         @Override
@@ -213,6 +214,7 @@ public class IdentityAct extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         try {
+            btnGet.setChecked(false);
             iid2Service.releaseDev();
         } catch (IOException e) {
             e.printStackTrace();
