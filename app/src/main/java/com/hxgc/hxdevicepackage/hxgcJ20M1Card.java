@@ -32,7 +32,7 @@ public class hxgcJ20M1Card
 
 		byte[] bysRespPkg = null;
 		bysRespPkg = RecivePackage(1000);
-		if(null == bysRespPkg)
+		if(null == bysRespPkg|| bysRespPkg.length<8)
 		{
 			return false;
 		}
